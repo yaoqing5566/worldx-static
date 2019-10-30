@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<view class="container xhs-detail">
+
+    <image class="banner" mode="widthFix"  src="https://haizitong.com/image/holabanner.png"></image>
+    <view class="item1">
+        <view class="title">标题标题标题标题标题标题标题</view>
+        <view class="title">标题标题标题标题标题标题标题</view>
+        <view class="sub">活动期限：4.20-4.25</view>
+        <view class="sub">转发类型：小红书投稿</view>
+        <view class="sub">招募人数：100人</view>
+        <view class="progress">
+            <view>
+                <image style="width: 50%" mode="scaleToFill" src="../../image/progress.png"></image>
+                <view class="text">已报名82人</view>
+            </view>
+        </view>
+    </view>
+    <view class="item2">
+        <view class="title"> <image class="ico"  mode="widthFix" src="../../image/wx-ico1.png"></image>转发要求：</view>
+        <view class="sub">投放平台：<image class="a" mode="widthFix"  src="../../image/xhs.png"></image>小红书</view>
+        <view class="text">1.小红书粉丝数量不低于1000人</view>
+        <view class="text">2.小红书粉丝数量不低于1000人小红书粉丝数量不低于1000人小红书粉丝数量不低于1000人小红书粉丝数量不低于1000人</view>
+        <view class="text">3.小红书粉丝数量不低于1000人</view>
+        <view class="text">4.小红书粉丝数量不低于1000人</view>
+    </view>
+    <view class="item2">
+        <view class="title"> <image class="ico"  mode="widthFix" src="../../image/wx-ico2.png"></image>投放步骤：</view>
+        <view class="step">
+            <image mode="widthFix" src="../../image/xhs-step.png"></image>
+        </view>
+    </view>
+    <view class="item2">
+        <view class="title">
+            <image class="ico" style="width: 23px"  mode="widthFix" src="../../image/wx-ico3.png"></image>投放信息：
+            <view class="copy" bindtap="copyText" data-text="小红书粉丝数量不低于1000人小红书粉丝数量不低">复制文字</view>
+        </view>
+        <text class="text" style="padding-top: 20px">小红书粉丝数量不低于1000人小红书粉丝数量不低
+            于1000人小红书粉丝数量不低于1000人小红书粉丝数量不低于1000人小红书粉丝数量不低于1000人小红书粉丝数量不低于1000人小红书粉丝数量不低于1000人</text>
+        <view class="weui-flex-con">
+            <view class="weui-flex">
+                <view class="weui-flex__item" wx:for="{{files}}" wx:key="*this">
+                    <view class="placeholder" bindtap="previewImage" id="{{item}}">
+                        <image  src="{{item}}" mode="widthFix" />
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="item2" style="border-bottom: none">
+        <view class="title">
+            <image class="ico" style="width: 23px"  mode="widthFix" src="../../image/wx-ico3.png"></image>投放范例：
+        </view>
+        <view class="weui-flex-con" style="padding-top: 20px">
+            <view class="weui-flex">
+                <view class="weui-flex__item" wx:for="{{files}}" wx:key="*this">
+                    <view class="placeholder" bindtap="previewImage" id="{{item}}">
+                        <image  src="{{item}}" mode="widthFix" />
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view style="height: 50px"></view>
+    <view class="fixed-bottom">
+        <view class="text">广告酬劳:<text>￥110.0</text></view>
+        <view class="but">
+            <button type="primary" size="default" style="background:#000000"  bindtap="saveImage">下载转发素材</button>
+            <button type="primary" size="default">上传信息</button>
+        </view>
+    </view>
+
+</view>

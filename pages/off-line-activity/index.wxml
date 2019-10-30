@@ -1,0 +1,27 @@
+<!--index.wxml-->
+
+<view class="container off-line-activity">
+    <view class="title">最新活动</view>
+    <view class="con">
+        <view class="list" wx:for="{{dataArrs}}" wx:for-item="item">
+            <view class="img"><image mode="aspectFill"  src="https://haizitong.com/image/holabanner.png"></image></view>
+            <view class="title">东京在东京召开了第十次日本代购联盟研讨会在东京召开了第十次日本代购联盟研讨会</view>
+            <view class="name">2017年将近尾声,在东京召开了第十次日本代购联盟研讨会</view>
+            <view class="time">
+                <image  mode="widthFix" src="../../image/time.png"></image>2018.7.26 13:00
+            </view>
+        </view>
+    </view>
+
+    <view class="title history">往期回顾</view>
+    <view class="con">
+        <view class="list" wx:for="{{dataArrs}}" wx:for-item="item">
+            <view class="img"><image mode="aspectFill"  src="https://haizitong.com/image/holabanner.png"></image></view>
+            <view class="title">东京在东京召开了第十次日本代购联盟研讨会在东京召开了第十次日本代购联盟研讨会</view>
+            <view class="name">2017年将近尾声,在东京召开了第十次日本代购联盟研讨会</view>
+            <view class="time">
+                <image  mode="widthFix" src="../../image/time.png"></image>2018.7.26 13:00
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,163 @@
+<!--index.wxml-->
+<view class="container fill-in-information">
+    <mp-cells>
+        <mp-cell>
+            <mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" upload="{{uplaodFile}}" files="{{files}}" max-count="5" title="图片上传" tips="图片上传提示"></mp-uploader>
+        </mp-cell>
+    </mp-cells>
+    <view class="item1">
+        <view class="title">请完善您的个人信息</view>
+        <view class="sub-name">完成填写后可活动当月运费劵一张，当月有效</view>
+        <view class="file">
+            <image bindtap="chooseImage" class="image-upload"  src="{{form.icon?form.icon:'../../image/img-upload.png'}}"></image>
+        </view>
+        <view class="sub-name font-size12">请上传真实照片</view>
+        <view class="sub-name font-size12">便于参加线下活动的确认</view>
+    </view>
+    <view class="item2">
+        <view class="{{pageType==0?'active':''}}"  bindtap="changeBut" data-index="0">基本资料</view>
+        <view class="{{pageType==1?'active':''}}"  bindtap="changeBut" data-index="1">社交信息</view>
+    </view>
+
+    <view class="item3">
+        <view class="page-section page-section-spacing swiper">
+            <swiper current="{{pageType}}" duration="100"  style="height: 620px">
+                <block>
+                    <swiper-item>
+                        <view class="page1">
+                            <view class="input">
+                                姓名<input class="weui-input"  placeholder=""/>
+                            </view>
+                            <view class="select">
+                                性别
+                                <picker class="text" bindchange="bindSelectGender" value="{{selectGenderIndex}}" range="{{genderOption}}">
+                                    <input disabled class="weui-input" value="{{form.gender}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="select">
+                                生日
+                                <picker class="text"  mode="date" value="{{dqData}}" start="2000-09-01" end="2037-09-01" bindchange="bindDateChange">
+                                    <input disabled class="weui-input" value="{{form.birthday}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="select">
+                                家乡
+                                <picker class="text" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{addressJson}}" range-key="cName">
+                                    <input disabled class="weui-input" value="{{form.address}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="select">
+                                目前所在地址
+                                <picker class="text" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{addressJson}}" range-key="cName">
+                                    <input disabled class="weui-input" value="{{form.address}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="select">
+                                常用运输方式
+                                <picker class="text" bindchange="bindSelectGender" value="{{selectGenderIndex}}" range="{{genderOption}}">
+                                    <input disabled class="weui-input" value="{{form.gender}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="select">
+                                常用购买方式
+                                <picker class="text" bindchange="bindSelectGender" value="{{selectGenderIndex}}" range="{{genderOption}}">
+                                    <input disabled class="weui-input" value="{{form.gender}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="select">
+                                年交易额(人民币)
+                                <picker class="text" bindchange="bindSelectGender" value="{{selectGenderIndex}}" range="{{genderOption}}">
+                                    <input disabled class="weui-input" value="{{form.gender}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="select">
+                                主要贩卖平台
+                                <picker class="text" bindchange="bindSelectGender" value="{{selectGenderIndex}}" range="{{genderOption}}">
+                                    <input disabled class="weui-input" value="{{form.gender}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="select">
+                                交易量最高的三个种类
+                                <picker style=" width: calc(100% - 160px);" class="text" bindchange="bindSelectGender" value="{{selectGenderIndex}}" range="{{genderOption}}">
+                                    <input disabled class="weui-input" value="{{form.gender}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="select">
+                                未来最想贩卖的产品种类
+                                <picker style=" width: calc(100% - 160px);" class="text" bindchange="bindSelectGender" value="{{selectGenderIndex}}" range="{{genderOption}}">
+                                    <input disabled class="weui-input" value="{{form.gender}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                        </view>
+                    </swiper-item>
+                </block>
+                <block >
+                    <swiper-item>
+                        <view class="page1">
+                            <view class="input">
+                                微信昵称<input class="weui-input"  placeholder=""/>
+                            </view>
+                            <view class="input">
+                                微信号<input class="weui-input"  placeholder=""/>
+                            </view>
+                            <view class="select">
+                                微信好友数
+                                <picker class="text" bindchange="bindSelectGender" value="{{selectGenderIndex}}" range="{{genderOption}}">
+                                    <input disabled class="weui-input" value="{{form.gender}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="select">
+                                小红书粉丝数
+                                <picker class="text" bindchange="bindSelectCont" data-type="xiaohongshu" value="{{xiaohongshu.sIndex}}" range="{{xiaohongshu.arrs}}">
+                                    <input disabled class="weui-input" value="{{xiaohongshu.arrs[form.xiaohongshuIndex]}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="input" style="padding-right: 0px;" hidden="{{form.xiaohongshuIndex<0||form.xiaohongshuIndex==7}}">
+                                小红书账号链接<view style="color: red"  bindtap="showImg" data-type="1">如何获取链接</view>
+                                <view class="input-link" ><input   placeholder=""/></view>
+                            </view>
+                            <view class="select">
+                                微博粉丝数
+                                <picker class="text" bindchange="bindSelectCont" data-type="weibo" value="{{weibo.sIndex}}" range="{{weibo.arrs}}">
+                                    <input disabled class="weui-input"  value="{{weibo.arrs[form.weiboIndex]}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="input" style="padding-right: 0px;" hidden="{{form.weiboIndex<0||form.weiboIndex==6}}">
+                                微博账号链接<view style="color: red" bindtap="showImg" data-type="2">如何获取链接</view>
+                                <view class="input-link" ><input  placeholder=""/></view>
+                            </view>
+                            <view class="select">
+                                淘宝粉丝数
+                                <picker class="text" bindchange="bindSelectCont" data-type="taobao" value="{{taobao.sIndex}}" range="{{taobao.arrs}}">
+                                    <input disabled class="weui-input" value="{{taobao.arrs[form.taobaoIndex]}}"  placeholder=""/>
+                                </picker>
+                                <view class="triangle"></view>
+                            </view>
+                            <view class="input" style="padding-right: 0px;" hidden="{{form.taobaoIndex<0||form.taobaoIndex==5}}">
+                                淘宝账号链接<view style="color: red" bindtap="showImg" data-type="3">如何获取链接</view>
+                                <view class="input-link" ><input   placeholder=""/></view>
+                            </view>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+    <view class="img-view {{showImgType==0?'hide':''}}" bindtap="showImg" data-type="0">
+        <view style="padding: 30px 0"><image mode="widthFix" src="../../image/wx{{showImgType==0?1:showImgType}}.png"></image></view>
+    </view>
+    <view class="save-but"  bindtap="nextPage" data-url="/xhs-detail/index">提交</view>
+</view>

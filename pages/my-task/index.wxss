@@ -1,0 +1,16 @@
+.my-task{ background-color: #fff}
+.my-task .item{
+  position: relative; padding-top: 20px; padding-bottom: 30px;
+}
+.my-task .item .list{ padding: 20px 20px 20px 80px; min-height: 60px; position: relative; border-bottom:1px solid #c9c9c9;line-height: 20px;
+display: flex;align-items: center; justify-content: space-between;
+}
+.my-task .item .list:last-child{border-bottom: none}
+.my-task .item .text{font-size: 12px; line-height: 18px;color:rgba(0,0,0,0.9)}
+.my-task .item .text .title{ font-size: 13px; font-weight: bold;color:rgba(0,0,0,1)}
+.my-task .item .ico{ width: 55px; height: 55px; border:1px solid #c9c9c9; border-radius: 10px; left: 12px; position: absolute;}
+.my-task .item .triangle{ width: 9px; position: absolute; right: 20px; top: 17px}
+.my-task .item .a{ color: #b94545; font-size: 12px;width: 51px}
+.my-task .item .a image{
+    width: 7px; vertical-align: middle; margin-left: 2px;
+}

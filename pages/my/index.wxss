@@ -1,0 +1,26 @@
+.my{
+  background-color: #fff;
+}
+.my .infor{
+  position: relative;
+}
+.my .infor .bg{ width: 100%}
+.my .infor .box{ position: absolute; top: 20%; left: 10%}
+.my .infor .box .u{
+  width: 60px; height: 60px; border-radius: 50%;vertical-align: middle;
+}
+.my .infor .box .item{
+  display: inline-block; vertical-align: middle; color: #fff; padding: 0 0 0 20px;
+}
+.my .infor .box .item .mobil{
+ font-size: 16px; font-weight: bold;
+ }
+.my .infor .box .item .type{
+  display: inline-block; background-color: #a00000; border: 1px solid #a20a16; border-radius: 20px; padding: 1px 6px; margin-top: 6px;
+}
+.my .item2{
+  position: relative; padding-top: 20px;
+}
+.my .item2 .menu{ padding: 0 0 0 50px; position: relative; border-bottom:1px solid #c9c9c9;line-height: 50px;}
+.my .item2 .ico{ width: 22px; position: absolute; left: 20px; top: 15px}
+.my .item2 .triangle{ width: 9px; position: absolute; right: 20px; top: 17px}

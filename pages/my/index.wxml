@@ -1,0 +1,31 @@
+<!--index.wxml-->
+
+<view class="container my">
+    <view class="infor">
+        <image class="bg" mode="widthFix"  src="../../image/user-top.png"></image>
+        <view class="box">
+            <image class="u"   src="../../image/u.png"></image>
+            <view class="item">
+                <view class="mobil">13585622903</view>
+                <view class="type">红卡会员</view>
+            </view>
+        </view>
+    </view>
+    <view class="item2">
+        <view class="menu">
+            <image class="ico"  mode="widthFix" src="../../image/me1.png"></image>
+            个人资料
+            <image class="triangle"  mode="widthFix" src="../../image/triangle.png"></image>
+        </view>
+        <view class="menu" bindtap="bindNext" >
+            <image class="ico"  mode="widthFix" src="../../image/me2.png"></image>
+            参加的任务
+            <image class="triangle"  mode="widthFix" src="../../image/triangle.png"></image>
+        </view>
+        <view class="menu">
+            <image class="ico"  mode="widthFix" src="../../image/me3.png"></image>
+            钱包
+        </view>
+    </view>
+
+</view>

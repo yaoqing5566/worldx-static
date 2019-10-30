@@ -1,0 +1,37 @@
+.fill-in-information{
+    font-size: 14px;background-color: #fff
+}
+.fill-in-information .title{
+     font-size: 15px; color: #000000; text-align: center; padding: 10px 0;
+}
+.fill-in-information .sub-name{
+    color: #a6a6a6; text-align: center;
+}
+.fill-in-information .image-upload{
+    width: 65px; height: 65px; margin: auto; display: inline-block; border-radius: 50px; overflow: hidden;
+}
+.file{
+    text-align: center; width: 100%; height: 65px; padding: 20px 0 10px 0;
+}
+.font-size12{font-size: 12px; line-height: 21px}
+.item2{
+    line-height: 45px; text-align: center; border-bottom: 1px solid #e3e3e3;border-top: 1px solid #e3e3e3; margin-top: 20px;
+}
+.item2 view{ display: inline-block;padding: 0 15px; margin: 0 10px}
+.item2 .active{
+    border-bottom: 2px solid #fc3d66;
+}
+.input,.select{padding-right: 20px; flex-wrap: wrap}
+.select .triangle{ position: absolute; top: 50%; margin-top: -0px; right: 15px}
+.page1{padding: 0 15px}
+.triangle{ right: 15px}
+.input-link{width: 100%}
+.input-link input{
+    border: 1px solid #e3e3e3;width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left;
+}
+.save-but{
+    line-height: 40px; position: fixed; width: calc(100% - 30px); left: 15px; bottom: 10px; background: #000000; color: #fff; text-align: center; font-size: 15px;
+}
+.img-view{ position: fixed; width: 100%; height: calc(100% - 60px); padding: 30px 0; top: 0px; left: 0px; z-index: 11; background: rgba(0,0,0,0.8); overflow-y: auto; display: flex; justify-content: center;}
+.img-view image{ max-width: 407px; width: 70%}
+.img-view.hide{ display: none}

@@ -1,0 +1,50 @@
+/**app.wxss**/
+@import './components/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+page{height: 100%;}
+.container {
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    box-sizing: border-box; position: relative; background-color: #e0e0e0
+}
+
+.navigator-arrow {
+    position: relative;
+}
+.height50{ height:50px}
+image{vertical-align: top;}
+
+
+.input,.select{ position: relative; border-bottom:1px solid #e3e3e3;line-height: 30px; padding:10px 0 }
+.input,.select{ display: flex; justify-content: space-between}
+.input input{
+    display: block; width: calc(100% - 100px); line-height: 30px; height: 30px; text-align: right;
+}
+.select .text{display: block; width: calc(100% - 120px); text-align: right;}
+.select input{
+    display: block; width: 100%; line-height: 30px; height: 30px; text-align: right;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.triangle{position: relative;}
+.triangle:after {
+    content: " ";
+    display: inline-block;
+    height: 18rpx;
+    width: 18rpx;
+    border-width: 2rpx 2rpx 0 0;
+    border-color: #888888;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 50%;
+    margin-top: -9rpx;
+    right: -20rpx;
+}
+
+.fixed-bottom{ position: fixed; width: 100%; left: 0px; bottom: 0px; height: 50px; background: #fff;border-top: 1px solid #f1f1f1; }

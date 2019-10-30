@@ -1,0 +1,48 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/xhs-detail/index",
+    "pages/my/index",
+    "pages/my-task/index",
+    "pages/fill-in-information/index",
+    "pages/off-line-activity/index"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WORLD X",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#f13f5a",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/tab1.png",
+        "selectedIconPath": "image/tab1-active.png",
+        "text": "品牌福利"
+      },
+      {
+        "pagePath": "pages/off-line-activity/index",
+        "iconPath": "image/tab2.png",
+        "selectedIconPath": "image/tab2-active.png",
+        "text": "线下活动"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "image/tab3.png",
+        "selectedIconPath": "image/tab3-active.png",
+        "text": "我"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "mp-dialog": "../../../components/weui-miniprogram/dialog/dialog"
+  }
+}

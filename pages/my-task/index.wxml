@@ -1,0 +1,18 @@
+<!--index.wxml-->
+
+<view class="container my-task">
+    <view class="item">
+        <view class="list" wx:for="{{dataArrs}}" wx:for-item="item">
+            <image class="ico" mode="aspectFill" src="{{item.ico}}"></image>
+            <view class="text">
+                <view class="title">资生堂株式会社</view>
+                <view>资生堂d program 9月投稿</view>
+            </view>
+            <view class="a">待上传
+                <image mode="widthFix" src="../../image/triangle.png"></image>
+            </view>
+
+        </view>
+    </view>
+
+</view>

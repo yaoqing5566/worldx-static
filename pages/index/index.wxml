@@ -1,0 +1,44 @@
+<!--index.wxml-->
+
+<view class="container index">
+    <view class="list" wx:for="{{dataArrs}}" wx:for-item="item"  bindtap="nextPage" data-url="/fill-in-information/index">
+        <image class="ico" mode="aspectFill" src="{{item.ico}}"></image>
+        <view class="con">
+            <view class="title">标题</view>
+            <view class="page-section-spacing">
+                <view class="flex-item">
+                    <view>转发类型</view>
+                    <view class="t">小红书投稿</view>
+                </view>
+                <view class="flex-item a2">
+                    <view>转发平台</view>
+                    <view>
+                        <image mode="aspectFit" bindload="imageLoad" data-index="{{ index }}" style="width:{{images[index].width}}px;height:{{images[index].height}}px;" src="{{item.platform}}"></image>
+                    </view>
+                </view>
+                <view class="flex-item a2">
+                    <view>结束时间</view>
+                    <view class="t">2019.10.18</view>
+                </view>
+                <view class="flex-item a2">
+                    <view>招募人数</view>
+                    <view class="t">20人</view>
+                </view>
+            </view>
+            <view class="progress">
+                <view>
+                    <image style="width: {{item.progress}}%" mode="scaleToFill" src="../../image/progress.png"></image>
+                    <view class="text">已报名82人</view>
+                </view>
+            </view>
+            <view class="banner">
+                <image mode="widthFix"  src="https://haizitong.com/image/holabanner.png"></image>
+            </view>
+            <view class="but">
+                <view>奖励金额：<lable>500元</lable></view>
+                <button style="float: right" type="warn" size="mini" bindtap="warn">查看详情</button>
+            </view>
+        </view>
+    </view>
+ 
+</view>
