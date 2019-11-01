@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/line-activity-detail/index",    //地图功能
+    "pages/line-activity-detail/index", //地图
     "pages/index/index",
+
     "pages/xhs-detail/index",
     "pages/upload-information/index",
     "pages/upload-information-end/index",
