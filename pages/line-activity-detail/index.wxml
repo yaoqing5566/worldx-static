@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="container line-activity-detail">
+    <view class="page-section page-section-spacing swiper">
+        <swiper indicator-dots="true" interval="2000" duration="500" style="height:{{windowHeight-200}}px"
+                bindchange="swiperChange">
+            <block wx:for="{{banners}}" wx:key="*this">
+                <swiper-item>
+                    <view class="swiper-item">
+                        <image class="banner " src="{{item}}" mode="aspectFill"/>
+                        <view class="shadow"></view>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="text-bottom">
+            <view class="title">标题标题标题标题标题标题标题标题</view>
+            <view class="tag">
+                <view wx:for="{{banners}}" wx:key="*this" wx:for-index="bindex" class="{{bindex==current?'active':''}}"
+                      style="width: calc((100% - {{(banners.length-1)*6}}px)/{{banners.length}})">
+                    <view class="pr"></view>
+                </view>
+            </view>
+            <view class="sub" style="margin-top: 20px">
+                <image class="ico" mode="widthFix" src="../../image/ico1.png"></image>
+                东京都渋谷区神宫前4-32-7 神崎ビル 1F
+            </view>
+            <view class="sub">
+                <image class="ico" style="top: 5px" mode="widthFix" src="../../image/ico2.png"></image>
+                2018.8.15 15:00～18:00
+            </view>
+            <view class="sub">
+                <image class="ico" style="top: 5px" mode="widthFix" src="../../image/ico3.png"></image>
+                预计人数：150
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="title">活动内容</view>
+        <view class="text">
+            发生在偏僻贫瘠的山村之中。张保民（宋洋 饰）是一名矿工，一天，他被妻子翠霞（谭卓 饰）叫回了家，原来，他们的儿子失踪了。带着儿子的照片，不会说话的张保民踏上了寻子之路，途中，他遇见了大资本家昌万年（姜武
+            饰）的爪牙，两方人马起了冲突，昌万年骗张保民自己知道他儿子的下落，实际上，他隐藏了一个黑暗的秘密。
+        </view>
+        <view class="title" style="margin-top: 10px">活动奖品<text>(活动奖品已现场实物为准)</text></view>
+        <image class="ico" style="width: 100%" mode="widthFix" src="https://haizitong.com/image/gqbanner.png"></image>
+        <view class="title" style="margin-top: 10px">活动地点</view>
+        <map id="map" longitude="113.324520" latitude="23.099994" show-location="true" scale="14" controls="{{controls}}" markers="{{markers}}" bindmarkertap="getLocation" polyline="{{polyline}}"  show-location style="width: 100%; height: 220px;">
+            <cover-view class="markers-tag">
+                青少年英语培训青少年英语培训青少
+                <cover-view class="but" bindtap="getLocation">导航</cover-view>
+            </cover-view>
+        </map>
+    </view>
+
+    <view style="height: 50px"></view>
+    <view class="fixed-bottom">
+        <view class="but">
+            <button type="primary" size="default" style="background:#000000"  bindtap="saveImage">查看参展品牌</button>
+            <button type="primary" size="default" bindtap="nextPage" data-url="/upload-information/index">我要参加</button>
+        </view>
+    </view>
+
+</view>

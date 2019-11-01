@@ -1,8 +1,10 @@
 {
   "pages": [
-
+    "pages/line-activity-detail/index",    //地图功能
     "pages/index/index",
     "pages/xhs-detail/index",
+    "pages/upload-information/index",
+    "pages/upload-information-end/index",
     "pages/my/index",
     "pages/my-task/index",
     "pages/fill-in-information/index",
@@ -41,8 +43,14 @@
       }
     ]
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "mp-dialog": "../../../components/weui-miniprogram/dialog/dialog"
+    "mp-dialog": "../../../components/weui-miniprogram/dialog/dialog",
+    "mp-toptips": "../../../components/weui-miniprogram/toptips/toptips"
   }
 }

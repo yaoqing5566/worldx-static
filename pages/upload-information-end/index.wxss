@@ -1,0 +1,18 @@
+/**index.wxss**/
+.upload-information-end{
+  background: #fff; font-size: 12px;padding: 20px;
+}
+.title{font-size: 14px; text-align: center; font-weight: bold}
+.sub{
+    padding: 10px 0px 20px 10px;text-align: center;
+}
+.save-but{
+    line-height: 40px; position: fixed; width: calc(100% - 30px); left: 15px; bottom: 10px; background: #000000; color: #fff; text-align: center; font-size: 15px;
+}
+.upload-information-end .weui-cell{padding: 10px 0px}
+.weui-input {
+    height: 30px;
+    min-height: 30px;
+    line-height: 30px; font-size: 12px;
+
+}

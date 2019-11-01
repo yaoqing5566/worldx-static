@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container upload-information-end">
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <view class="title">您已经完成活动</view>
+    <view class="sub">请留下您的微信号及手机号，审核通过后会有客服加您并发放现金红</view>
+    <mp-cells>
+        <mp-cell prop="wx" ext-class="">
+            <input bindinput="formInputChange" data-field="wx" class="weui-input" placeholder="请输入您的微信号，审核通过后会有客服加您"/>
+        </mp-cell>
+        <mp-cell prop="mobile" ext-class="">
+            <input bindinput="formInputChange" data-field="mobile" class="weui-input" placeholder="请输入您的手机号码"/>
+        </mp-cell>
+    </mp-cells>
+    <view class="save-but" bindtap="save">完成</view>
+</view>

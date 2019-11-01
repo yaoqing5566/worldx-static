@@ -1,0 +1,21 @@
+/**index.wxss**/
+.upload-information{
+  background: #fff; font-size: 12px;padding: 20px;
+}
+.upload{
+    width: 96px; display: inline-block; margin-right: 20px; text-align: center;
+}
+.upload .text{
+    color: rgb(32, 160, 255);
+}
+.weui-uploader__input-box{position: relative}
+.explain{ font-size: 12px;padding: 30px 0 0 0}
+.fixed-bottom{
+    line-height: 50px; font-size: 14px;
+}
+.fixed-bottom .text{display: inline-block;padding: 0 0 0 15px}
+.fixed-bottom .text text{ color: #f54458}
+.fixed-bottom .but{float: right}
+.fixed-bottom .but button{ line-height: 50px; font-size: 14px; border-radius: 0px; color: #fff; background:#f54458; border-left: 1px solid #fff;display: inline-block;
+padding: 0 20px;
+}

@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container upload-information">
+    <view class="upload">
+        <view class="weui-uploader__input-box">
+            <view class="weui-uploader__input" bindtap="chooseImage" data-type="1"></view>
+            <image class="weui-uploader__img" src="{{imgs.img1}}" mode="aspectFill" />
+        </view>
+        <view class="text">上传规范1</view>
+    </view>
+    <view class="upload">
+        <view class="weui-uploader__input-box">
+            <view class="weui-uploader__input" bindtap="chooseImage" data-type="2"></view>
+            <image class="weui-uploader__img" src="{{imgs.img2}}" mode="aspectFill" />
+        </view>
+        <view class="text">上传规范1</view>
+    </view>
+    <text class="explain">
+        提示：\n~请按照要求上传社交平台截图，文字图片或者视频补课缺少，补课分组\n~上传成功后10个工作日工作人员会加您微信，分发奖金
+    </text>
+    <view class="fixed-bottom">
+        <view class="but">
+            <button type="primary" size="default"  bindtap="nextPage" data-url="/upload-information-end/index?id={{id}}">上传图片</button>
+        </view>
+    </view>
+</view>
