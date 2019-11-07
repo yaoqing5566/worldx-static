@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/line-activity-detail/index", //地图
+    "pages/qrcode/index", //生成二维码
     "pages/index/index",
 
     "pages/xhs-detail/index",

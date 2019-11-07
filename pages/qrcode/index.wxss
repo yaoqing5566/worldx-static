@@ -1,0 +1,18 @@
+
+.off-line-ok{
+  background-color: #fff; padding: 20px;
+}
+.off-line-ok .box{
+   background: #fff; border-radius: 10px; padding: 10px;
+}
+.off-line-ok .box .title{ font-size: 21px; font-weight: bold; padding-bottom: 10px}
+.off-line-ok .box .sub-title{
+  font-size: 12px;
+}
+.off-line-ok .box .sub-title .but{ }
+.off-line-ok .box .item1{
+  border-bottom: 1px dotted #c9c9c9; padding-bottom: 20px;
+}
+.off-line-ok .box .item2{
+  border-bottom: 1px dotted #c9c9c9; padding: 20px 0;
+}

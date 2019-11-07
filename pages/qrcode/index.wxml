@@ -1,0 +1,18 @@
+<!--index.wxml-->
+
+<view class="container off-line-ok">
+    <view class="box">
+<!--        <view class="item1">-->
+<!--            <view class="title">标题门模块 买手推介会</view>-->
+<!--            <view class="sub-title">时间：2018.11.24 13:30 ~ 18:00</view>-->
+<!--            <view class="sub-title">地点：『ベルサール渋谷ガーデン』東京都渋谷区南平台町16-17 住友不動産渋谷ガーデンタワー1階、地下1楼-->
+<!--                <view class="but">导航</view>-->
+<!--            </view>-->
+<!--        </view>-->
+        <view class="item2">
+<!--            <view class="title">入场二维码</view>-->
+            <canvas style="width: 200px; height: 200px;" canvas-id="myQrcode"></canvas>
+        </view>
+
+    </view>
+</view>
